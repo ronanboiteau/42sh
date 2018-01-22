@@ -1,4 +1,8 @@
-#include <limits.h>
+#ifdef __linux__
+# include <linux/limits.h>
+#else
+# include <limits.h>
+#endif
 #include <stdbool.h>
 #include <stdlib.h>
 #include <unistd.h>

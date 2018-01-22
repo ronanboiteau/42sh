@@ -1,4 +1,8 @@
-#include <limits.h>
+#ifdef __linux__
+# include <linux/limits.h>
+#else
+# include <limits.h>
+#endif
 #include <stdlib.h>
 #include <unistd.h>
 #include "my.h"
