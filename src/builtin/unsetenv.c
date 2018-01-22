@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdlib.h>
 #include "my.h"
 #include "mysh_builtins.h"
@@ -18,7 +19,7 @@ static void	unset_matches_in_env(char ***env, char *to_unset)
       while (elem[tmp] && elem[tmp] != '=')
 	tmp += 1;
       elem[tmp] = '\0';
-      if (match(elem, to_unset) == TRUE)
+      if (match(elem, to_unset) == true)
 	my_unsetenv(env, elem);
       else
 	idx += 1;

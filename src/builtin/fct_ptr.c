@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdlib.h>
 #include "my.h"
 #include "mysh_builtins.h"
@@ -71,11 +72,11 @@ t_uchar		call_builtins(t_builtin_ptr **builtins,
     {
       if (my_cmp(argv[0], builtins[idx]->command))
 	{
-	  *builtin_found = TRUE;
+	  *builtin_found = true;
 	  return (builtins[idx]->fct(env, argv));
 	}
       idx += 1;
     }
-  *builtin_found = FALSE;
+  *builtin_found = false;
   return (0);
 }

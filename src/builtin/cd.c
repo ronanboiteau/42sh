@@ -1,4 +1,5 @@
-#include <linux/limits.h>
+#include <limits.h>
+#include <stdbool.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include "my.h"
@@ -11,7 +12,7 @@ static void	update_env(char ***env, char *oldpwd)
     my_exit(EXIT_FAILURE, "ERROR: Out of memory! Please reduce PATH_MAX.\n");
   if (getcwd(pwd, 100) == NULL)
     my_exit(EXIT_FAILURE, "ERROR: getcwd() failed.");
-  if (my_cmp(pwd, oldpwd) == FALSE)
+  if (my_cmp(pwd, oldpwd) == false)
     my_setenv(env, "OLDPWD=", oldpwd);
   my_setenv(env, "PWD=", pwd);
   free(pwd);
