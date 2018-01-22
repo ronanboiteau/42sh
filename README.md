@@ -10,7 +10,7 @@ This shell is based on [tcsh](https://en.wikipedia.org/wiki/Tcsh).
 
 ## Requirements
 
- - [A Linux distribution](https://en.wikipedia.org/wiki/Linux_distribution)
+ - [A Linux distribution](https://en.wikipedia.org/wiki/Linux_distribution) or [Apple's macOS](https://en.wikipedia.org/wiki/MacOS)
  - [Make](https://www.gnu.org/software/make/)
  - [GCC](https://gcc.gnu.org/)
 
